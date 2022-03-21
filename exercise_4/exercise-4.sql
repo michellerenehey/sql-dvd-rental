@@ -2,14 +2,14 @@
 -- Similar to exercise 3 but with customer, address, city
 
 SELECT 
-first_name, last_name, address, city
+    first_name, last_name, address, city
 FROM
-customer
+    customer
 LEFT JOIN 
-address 
+    address 
 ON 
-customer.address_id = address.address_id
+    customer.address_id = address.address_id
 LEFT JOIN
-city
+    city
 ON
-address.city_id = city.city_id
+    address.city_id = city.city_id

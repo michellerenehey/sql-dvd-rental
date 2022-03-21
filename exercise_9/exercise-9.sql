@@ -3,16 +3,16 @@
 -- use WHERE IS NULL
 
 SELECT
-film.title
+    film.title
 FROM
-film 
+    film 
 INNER JOIN
-inventory
+    inventory
 ON
-film.film_id = inventory.film_id
+    film.film_id = inventory.film_id
 LEFT JOIN
-rental
+    rental
 ON
-inventory.inventory_id = rental.inventory_id
+    inventory.inventory_id = rental.inventory_id
 WHERE
-rental.rental_date IS NULL 
+    rental.rental_date IS NULL 

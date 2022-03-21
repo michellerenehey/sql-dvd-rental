@@ -2,24 +2,24 @@
 -- Similar to exercise 9 with an additonal join
 
 SELECT 
-category.name
+    category.name
 FROM 
-inventory
+    inventory
 LEFT JOIN
-rental
+    rental
 ON
-inventory.inventory_id = rental.inventory_id
+    inventory.inventory_id = rental.inventory_id
 LEFT JOIN
-film
+    film
 ON
-inventory.film_id = film.film_id
+    inventory.film_id = film.film_id
 LEFT JOIN
-film_category
+    film_category
 ON
-film_category.film_id = film.film_id
+    film_category.film_id = film.film_id
 LEFT JOIN
-category
+    category
 ON
-category.category_id = film_category.category_id
+    category.category_id = film_category.category_id
 WHERE
-rental.rental_id IS NULL
+    rental.rental_id IS NULL

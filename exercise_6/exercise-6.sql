@@ -2,20 +2,20 @@
 -- Similar to exercise 5
 
 SELECT
-film.title
+    film.title
 FROM
-film
+    film
 LEFT JOIN 
-inventory
+    inventory
 ON
-film.film_id = inventory.film_id
+    film.film_id = inventory.film_id
 LEFT JOIN
-rental
+    rental
 ON
-inventory.inventory_id = rental.inventory_id
+    inventory.inventory_id = rental.inventory_id
 LEFT JOIN
-customer
+    customer
 ON
-rental.customer_id = customer.customer_id
+    rental.customer_id = customer.customer_id
 WHERE
-customer.first_name = 'Roberta'
+    customer.first_name = 'Roberta'

@@ -2,32 +2,32 @@
 -- Similar to exercise 7 with an additional join to get country name
 
 SELECT
-film.title
+        film.title
 FROM
 film
 LEFT JOIN
-inventory
+    inventory
 ON
-film.film_id = inventory.film_id
+    film.film_id = inventory.film_id
 LEFT JOIN
-rental
+    rental
 ON
-inventory.inventory_id = rental.inventory_id
+    inventory.inventory_id = rental.inventory_id
 LEFT JOIN
-customer
+    customer
 ON
-rental.customer_id = customer.customer_id
+    rental.customer_id = customer.customer_id
 LEFT JOIN
-address
+    address
 ON
-customer.address_id = address.address_id
+    customer.address_id = address.address_id
 LEFT JOIN
-city
+    city
 ON
-address.city_id = city.city_id
+    address.city_id = city.city_id
 LEFT JOIN
-country
+    country
 ON
-city.country_id = country.country_id
+    city.country_id = country.country_id
 WHERE
-country.country = 'Peru'
+    country.country = 'Peru'
