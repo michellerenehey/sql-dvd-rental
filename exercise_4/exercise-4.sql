@@ -2,7 +2,7 @@
 -- Similar to exercise 3 but with customer, address, city
 
 SELECT 
-first_name, last_name, address.address, city.city
+first_name, last_name, address, city
 FROM
 customer
 LEFT JOIN 
