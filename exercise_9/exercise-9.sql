@@ -16,3 +16,18 @@ ON
     inventory.inventory_id = rental.inventory_id
 WHERE
     rental.rental_date IS NULL 
+
+-- SELECT
+--     title
+-- FROM
+--     inventory
+-- LEFT JOIN
+--     film
+-- ON
+--     film.film_id = inventory.film_id
+-- LEFT JOIN
+--     rental
+-- ON
+--     inventory.inventory_id = rental.inventory_id
+-- WHERE
+--     rental.rental_date IS NULL 
